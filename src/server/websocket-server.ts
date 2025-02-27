@@ -73,7 +73,7 @@ export class SocketServer {
 
 	public emitEvent(event: EventsType, session_id: string, data: unknown) {
 		console.log(`Emitting event ${event} to session ${session_id}`);
-		console.log(data,'data Emitida')
+		console.log(data)
 		this.io.to(session_id).emit(event, { event, session_id, data });
 	}
 
